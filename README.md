@@ -12,7 +12,7 @@ git clone https://github.com/jnabasny/VSDb.git
 ```
 Or download and unzip all files to your desired directory.
 
-Go to ```youwebsite.com/install.php``` with your browser to configure your database.
+Go to ```yourwebsite.com/install.php``` with your browser to configure your database.
 
 PHP files that store your SQL information default to ```0660```.
 

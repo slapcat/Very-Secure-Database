@@ -9,7 +9,7 @@ $gen = $_POST['gen'];
 $key = $_SESSION['keys'];
 
 if ($_SESSION['burned'] == "") {
-	header('Location: http://homepage.com');
+	header('Location: index.html');
 	die();
 }
 /*
@@ -36,15 +36,15 @@ $rel_en = openssl_encrypt($rel, "aes-128-cbc", $key, 0, $iv);
 $gen_en = openssl_encrypt($gen, "aes-128-cbc", $key, 0, $iv);
 
 if (move_uploaded_file($_FILES["pic"]["tmp_name"], $destination)) {
-	error_log("file uploaded");
+	//error_log("file uploaded");
     } else {
         error_log("File not uploaded");
     }
 
 $servername = "localhost";
-$username = "admin";
-$password = "pass";
-$dbname = "db";
+$username = "##USERNAME##";
+$password = "##PASSWORD##";
+$dbname = "##DATABASE##";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -56,7 +56,7 @@ $sql = "INSERT INTO data (N, P, A, C, S, R, G)
 VALUES ('$name_en', '$pic_en', '$add_en', '$con_en', '$link_en', '$rel_en', '$gen_en')";
 
 if ($conn->query($sql) === TRUE) {
-	header('Location: http://homepage.com/read.php');
+	header('Location: read.php');
 	die();
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

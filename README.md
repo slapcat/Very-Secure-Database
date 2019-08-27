@@ -4,12 +4,19 @@ VSDb (Very Secure Database) is a nimble cryptographic database that doesn't stor
 
 ## Installation
 
-VSDb does not currently include an auto-install file. To install manually:
+Requirements: web server, PHP7, MySQL
 
-* Create an SQL database with two tables (ver and data). To ver, add one row (called "A") and place your key in it (your key will be made with keymaker.php as explained below). To data, add an incremental ID row and the following text rows: N, P, A, C, S, R, G.
-* Update read.php and add.php with the correct SQL database login information.
-* Use keymaker.php to produce a key with your unqiue password. Place this hash in the SQL table ver, row A.
-* You are now ready to login through index.html and begin adding entries to your database!
+Clone this git to any folder on your web server with:
+```
+git clone https://github.com/jnabasny/VSDb.git
+```
+Or download and unzip all files to your desired directory.
+
+Go to ```youwebsite.com/install.php``` with your browser to configure your database.
+
+PHP files that store your SQL information default to ```0660```.
+
+The installation file will delete itself upon successful completion. To install multiple databases, reclone the respository to a different directory.
 
 ## Contact
 

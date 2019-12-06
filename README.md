@@ -2,6 +2,8 @@
 
 VSDb (Very Secure Database) is a nimble cryptographic database that doesn't store its key anywhere online or offline. Instead of key-matching, VSDb attempts to decrypt the databse with a user-provided key. Any failure to decrypt delivers an error and restricts access. To keep your data as secure as possible, it is recommended that you only share your key through face-to-face communication with people you trust.
 
+[https://github.com/jnabasny/Very-Secure-Database/blob/master/head.png]
+
 ## Installation
 
 Requirements: web server, PHP7, MySQL
